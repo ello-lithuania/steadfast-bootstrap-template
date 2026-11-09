@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Steadfast: Free Bootstrap 5 Template for Small Service Businesses</title>
+  <meta name="description" content="Steadfast is a free, responsive Bootstrap 5 template for small service businesses, with services, process, pricing, reviews, FAQ and contact sections, plus light and dark themes.">
+  <meta name="theme-color" content="#0d5c4b">
+  <meta property="og:title" content="Steadfast: Free Bootstrap 5 Small Business Template">
+  <meta property="og:description" content="A clean, fast one-page template for repair shops, salons, tutors and local contractors. Light and dark themes, no jQuery.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="screenshot.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d5c4b'/%3E%3Cpath d='M8 16l8-7 8 7v8H8z' fill='%23fff'/%3E%3C/svg%3E">
+  <script>
+    /* Set the theme before first paint so the page does not flash. */
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('sf-theme'); } catch (e) {}
+      var dark = saved ? saved === 'dark' : (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches);
+      var el = document.documentElement;
+      el.setAttribute('data-bs-theme', dark ? 'dark' : 'light');
+      el.classList.remove('no-js');
+      el.classList.add('js');
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-root-margin="-20% 0px -65% 0px" tabindex="0">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Icon sprite: reuse with <svg class="icon"><use href="#i-name"></use></svg> -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.3 5.3L4 17l3 3 5.4-5.4a4 4 0 0 0 5.3-5.3l-2.6 2.6-2.3-.6-.6-2.3z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s7 7.2 7 12a7 7 0 0 1-14 0c0-4.8 7-12 7-12z"/></symbol>
+  <symbol id="i-brush" viewBox="0 0 24 24"><path d="M4 4h13v5H4zM17 6h3v5h-8v3"/><path d="M10 14h4v7h-4z"/></symbol>
+  <symbol id="i-door" viewBox="0 0 24 24"><path d="M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17M3 21h18"/><path d="M14 12v.5"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 15-15 0 10-6 15-14 15"/><path d="M5 21c2-5 5-8 9-10"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v3a3 3 0 0 1-3 3A15 15 0 0 1 3 6a3 3 0 0 1 3-3z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.5 2.9 6.2 6.8.8-5 4.6 1.3 6.7-6-3.3-6 3.3 1.3-6.7-5-4.6 6.8-.8z"/></symbol>
+</svg>
+
+<div class="topbar py-2 d-none d-md-block">
+  <div class="container d-flex justify-content-between">
+    <span>Open Monday to Saturday, 8:00 to 18:00</span>
+    <span>Need help today? <a href="tel:+10000000000">Call +1 000 000 0000</a></span>
+  </div>
+</div>
+
+<header class="site-nav sticky-top">
+  <nav class="navbar navbar-expand-lg py-3" aria-label="Main navigation">
+    <div class="container">
+      <a class="brand" href="#top">
+        <span class="brand-mark"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-wrench"></use></svg></span>
+        Steadfast
+      </a>
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <button class="btn btn-sf-ghost theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+          <svg class="icon icon-sm icon-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+          <svg class="icon icon-sm icon-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+        </button>
+        <a class="btn btn-sf d-none d-sm-inline-flex" href="#contact">Get a free quote</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse order-lg-2" id="mainNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#process">How it works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Recent work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center gy-5 gx-lg-5">
+        <div class="col-lg-6">
+          <span class="eyebrow">Local home repairs</span>
+          <h1>Small jobs done <span class="hero-highlight">properly</span>, the first time.</h1>
+          <p class="hero-lead mt-4">Leaks, loose doors, tired paint and the long list you keep meaning to get to. Tell us what needs fixing and get a clear price before anyone picks up a tool.</p>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a class="btn btn-sf btn-lg" href="#contact">Get a free quote
+              <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"></use></svg>
+            </a>
+            <a class="btn btn-sf-ghost btn-lg" href="#services">See our services</a>
+          </div>
+          <div class="hero-trust">
+            <div><strong>12 yrs</strong>in the trade</div>
+            <div><strong>2,400+</strong>jobs finished</div>
+            <div><strong>4.9 / 5</strong>average rating</div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-art">
+            <svg viewBox="0 0 560 520" role="img" aria-label="Illustration of a small house with a ladder and a toolbox">
+              <rect class="i-bg" x="30" y="30" width="500" height="460" rx="36"/>
+              <circle class="i-sun" cx="430" cy="118" r="46"/>
+              <path class="i-ground" d="M30 420h500v34a36 36 0 0 1-36 36H66a36 36 0 0 1-36-36z"/>
+              <rect class="i-wall" x="350" y="150" width="36" height="66" />
+              <path class="i-roof" d="M126 262 280 132l154 130z"/>
+              <rect class="i-wall" x="152" y="262" width="256" height="170"/>
+              <rect class="i-door" x="250" y="330" width="62" height="102"/>
+              <circle class="i-ink" cx="298" cy="384" r="4"/>
+              <rect class="i-glass" x="176" y="298" width="52" height="52"/>
+              <path class="i-line" d="M202 298v52M176 324h52"/>
+              <rect class="i-glass" x="334" y="298" width="52" height="52"/>
+              <path class="i-line" d="M360 298v52M334 324h52"/>
+              <path class="i-line" d="M84 432 126 214M128 432l42-218M99 356h44M107 316h44M115 276h44M92 394h44"/>
+              <rect class="i-accent" x="414" y="392" width="84" height="40" rx="6"/>
+              <rect class="i-line" x="414" y="392" width="84" height="40" rx="6"/>
+              <path class="i-line" d="M438 392v-10a6 6 0 0 1 6-6h24a6 6 0 0 1 6 6v10M414 410h84"/>
+              <path class="i-line" d="M60 432h440"/>
+            </svg>
+            <div class="hero-badge b1">
+              <span class="dot"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg></span>
+              <div><strong>Leaky tap fixed</strong><span>Today, 10:40</span></div>
+            </div>
+            <div class="hero-badge b2">
+              <span class="dot"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-shield"></use></svg></span>
+              <div><strong>12-month guarantee</strong><span>On all our work</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Services</span>
+        <h2>One call for the jobs that keep getting put off.</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal"><article class="sf-card">
+          <div class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-drop"></use></svg></div>
+          <h3>Plumbing repairs</h3>
+          <p>Dripping taps, running toilets, blocked drains and small leaks, sorted before they turn into big ones.</p>
+          <span class="from">From $65</span>
+        </article></div>
+        <div class="col-md-6 col-lg-4 reveal"><article class="sf-card">
+          <div class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-bolt"></use></svg></div>
+          <h3>Electrical fixes</h3>
+          <p>New sockets, light fittings, dimmers and fault finding, carried out by a certified electrician.</p>
+          <span class="from">From $75</span>
+        </article></div>
+        <div class="col-md-6 col-lg-4 reveal"><article class="sf-card">
+          <div class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-brush"></use></svg></div>
+          <h3>Painting and patching</h3>
+          <p>Filled cracks, clean edges and a fresh coat for a single wall or a whole room, with the mess tidied away.</p>
+          <span class="from">From $120</span>
+        </article></div>
+        <div class="col-md-6 col-lg-4 reveal"><article class="sf-card">
+          <div class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-door"></use></svg></div>
+          <h3>Doors and windows</h3>
+          <p>Sticking doors, worn seals, broken handles and new locks, so everything opens, closes and keeps the draught out.</p>
+          <span class="from">From $55</span>
+        </article></div>
+        <div class="col-md-6 col-lg-4 reveal"><article class="sf-card">
+          <div class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-wrench"></use></svg></div>
+          <h3>Assembly and mounting</h3>
+          <p>Flat-pack furniture, shelves, TV brackets and curtain rails, level and fixed firmly the first time.</p>
+          <span class="from">From $45</span>
+        </article></div>
+        <div class="col-md-6 col-lg-4 reveal"><article class="sf-card">
+          <div class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#i-leaf"></use></svg></div>
+          <h3>Outdoor upkeep</h3>
+          <p>Gutter clearing, fence panels, deck repairs and seasonal checks that keep small problems outside.</p>
+          <span class="from">From $70</span>
+        </article></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section" id="process">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">How it works</span>
+        <h2>Four steps, and no surprises on the bill.</h2>
+      </div>
+      <div class="row g-4 steps">
+        <div class="col-md-6 col-lg-3 reveal"><div class="step">
+          <h3>Tell us the job</h3>
+          <p>Send a message or a photo. A short description is enough to get started.</p>
+        </div></div>
+        <div class="col-md-6 col-lg-3 reveal"><div class="step">
+          <h3>Get a clear price</h3>
+          <p>You receive a fixed quote the same day, with materials listed separately.</p>
+        </div></div>
+        <div class="col-md-6 col-lg-3 reveal"><div class="step">
+          <h3>Pick a time</h3>
+          <p>Choose a two-hour arrival window that suits you, including Saturdays.</p>
+        </div></div>
+        <div class="col-md-6 col-lg-3 reveal"><div class="step">
+          <h3>Job done, area tidy</h3>
+          <p>We check the work with you, clean up and only then send the invoice.</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent work -->
+  <section class="section section-alt" id="work">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Recent work</span>
+        <h2>A few jobs from the last month.</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 reveal"><article class="work-card">
+          <svg viewBox="0 0 400 240" role="img" aria-label="Illustration of a kitchen tap over a sink">
+            <rect class="i-bg" width="400" height="240"/>
+            <rect class="i-soft" x="60" y="150" width="280" height="60" rx="6"/>
+            <path class="i-line" d="M200 150v-70a26 26 0 0 1 52 0v12"/>
+            <rect class="i-accent" x="186" y="136" width="28" height="16" rx="3"/>
+            <path class="i-sun" d="M252 106s10 11 10 18a10 10 0 0 1-20 0c0-7 10-18 10-18z"/>
+            <path class="i-line" d="M90 150V132M310 150v-18M60 178h280"/>
+          </svg>
+          <div class="work-body"><span class="tag">Plumbing</span><h3>Kitchen mixer replaced</h3><p>Old tap out, new one in and no more drips, in just under an hour.</p></div>
+        </article></div>
+        <div class="col-md-4 reveal"><article class="work-card">
+          <svg viewBox="0 0 400 240" role="img" aria-label="Illustration of a freshly painted wall with a paint roller">
+            <rect class="i-bg" width="400" height="240"/>
+            <rect class="i-sun" x="0" y="0" width="210" height="240"/>
+            <rect class="i-soft" x="170" y="62" width="110" height="34" rx="8"/>
+            <path class="i-line" d="M280 79h26v42h-82v30"/>
+            <rect class="i-accent" x="214" y="150" width="20" height="60" rx="4"/>
+            <rect class="i-line" x="214" y="150" width="20" height="60" rx="4"/>
+          </svg>
+          <div class="work-body"><span class="tag">Painting</span><h3>Living room refreshed</h3><p>Cracks filled and two coats on the walls, all done within a single day.</p></div>
+        </article></div>
+        <div class="col-md-4 reveal"><article class="work-card">
+          <svg viewBox="0 0 400 240" role="img" aria-label="Illustration of a repaired garden fence">
+            <rect class="i-bg" width="400" height="240"/>
+            <circle class="i-sun" cx="320" cy="62" r="30"/>
+            <path class="i-ground" d="M0 190h400v50H0z"/>
+            <path class="i-soft" d="M60 190V96l22-22 22 22v94zM116 190V96l22-22 22 22v94zM172 190V96l22-22 22 22v94zM228 190V96l22-22 22 22v94zM284 190V96l22-22 22 22v94z"/>
+            <rect class="i-accent" x="44" y="118" width="312" height="14" rx="3"/>
+            <rect class="i-accent" x="44" y="158" width="312" height="14" rx="3"/>
+          </svg>
+          <div class="work-body"><span class="tag">Outdoor</span><h3>Storm-damaged fence</h3><p>Five panels and two posts replaced, then treated to last through winter.</p></div>
+        </article></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Pricing</span>
+        <h2>Simple rates you can check before you book.</h2>
+        <p class="text-muted-sf mt-3 mb-0">Sample prices shown. Materials are charged at cost, and we always confirm the total first.</p>
+      </div>
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-4 reveal"><div class="price-card">
+          <h3>Quick fix</h3>
+          <div class="price">$65 <small>/ first hour</small></div>
+          <p class="text-muted-sf mb-0">For one small job that just needs doing.</p>
+          <ul class="price-list">
+            <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg>One job, up to an hour</li>
+            <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg>Same-week appointment</li>
+            <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg>12-month guarantee</li>
+          </ul>
+          <a class="btn btn-sf-ghost w-100" href="#contact">Book a quick fix</a>
+        </div></div>
+        <div class="col-lg-4 reveal"><div class="price-card featured">
+          <span class="price-flag">Most popular</span>
+          <h3>Half day</h3>
+          <div class="price">$220 <small>/ 4 hours</small></div>
+          <p class="text-muted-sf mb-0">For that list of jobs on the fridge door.</p>
+          <ul class="price-list">
+            <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg>As many jobs as fit</li>
+            <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg>Materials picked up for you</li>
+            <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg>Saturday slots available</li>
+            <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg>12-month guarantee</li>
+          </ul>
+          <a class="btn btn-sf w-100" href="#contact">Book a half day</a>
+        </div></div>
+        <div class="col-lg-4 reveal"><div class="price-card">
+          <h3>Full day</h3>
+          <div class="price">$400 <small>/ 8 hours</small></div>
+          <p class="text-muted-sf mb-0">For bigger updates or a whole property.</p>
+          <ul class="price-list">
+            <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg>Two people when needed</li>
+            <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg>Written plan and fixed quote</li>
+            <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg>Waste taken away</li>
+            <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"></use></svg>12-month guarantee</li>
+          </ul>
+          <a class="btn btn-sf-ghost w-100" href="#contact">Plan a full day</a>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section section-alt" id="reviews">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Reviews</span>
+        <h2>What customers tend to say.</h2>
+        <p class="text-muted-sf mt-3 mb-0">Placeholder text. Replace these with real reviews from your own customers.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 reveal"><figure class="review">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"></use></svg><svg aria-hidden="true"><use href="#i-star"></use></svg><svg aria-hidden="true"><use href="#i-star"></use></svg><svg aria-hidden="true"><use href="#i-star"></use></svg><svg aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <blockquote>Arrived in the window they promised, fixed the leak, and showed me what had gone wrong. The price was exactly what they quoted.</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">CN</span><div>Customer Name<span>Kitchen repair</span></div></figcaption>
+        </figure></div>
+        <div class="col-md-4 reveal"><figure class="review">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"></use></svg><svg aria-hidden="true"><use href="#i-star"></use></svg><svg aria-hidden="true"><use href="#i-star"></use></svg><svg aria-hidden="true"><use href="#i-star"></use></svg><svg aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <blockquote>I had a list of nine little jobs and had been ignoring it for a year. All nine were finished by lunchtime, and the place was left spotless.</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">CN</span><div>Customer Name<span>Half-day booking</span></div></figcaption>
+        </figure></div>
+        <div class="col-md-4 reveal"><figure class="review">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg aria-hidden="true"><use href="#i-star"></use></svg><svg aria-hidden="true"><use href="#i-star"></use></svg><svg aria-hidden="true"><use href="#i-star"></use></svg><svg aria-hidden="true"><use href="#i-star"></use></svg><svg aria-hidden="true"><use href="#i-star"></use></svg></div>
+          <blockquote>Clear communication from the first message. They sent a photo when the fence was finished, so I could check it from work.</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">CN</span><div>Customer Name<span>Fence repair</span></div></figcaption>
+        </figure></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="row gy-5 gx-lg-5">
+        <div class="col-lg-4 reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions we hear most.</h2>
+          <p class="text-muted-sf mt-3">Can't find what you need? <a href="#contact">Send us a message</a> and we'll reply the same day.</p>
+        </div>
+        <div class="col-lg-8 reveal">
+          <div class="accordion" id="faqList">
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">How quickly can you come out?</button></h3>
+              <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqList"><div class="accordion-body">Most small jobs are booked within the same week. For urgent leaks or electrical faults, call us and we'll do our best to come the same day.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">Is the quote really free?</button></h3>
+              <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">Yes. Send a description and a photo or two, and you'll get a price with no obligation. If we need to see the job first, that visit is free too.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">Do I need to buy the materials?</button></h3>
+              <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">Only if you want to. You can supply your own, or we can bring them and charge them at cost, with receipts included on the invoice.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">What does the guarantee cover?</button></h3>
+              <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">If something we fixed fails within 12 months because of our work, we come back and put it right at no charge.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">How do I pay?</button></h3>
+              <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">We send the invoice once you've checked the work. You can pay by card or bank transfer, and larger jobs can be split into stages.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">Which areas do you cover?</button></h3>
+              <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqList"><div class="accordion-body">We work across the city and within about 30 km of it. Further out is fine for larger jobs, so just ask.</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="row gy-5 gx-lg-5">
+        <div class="col-lg-5 reveal">
+          <span class="eyebrow">Contact</span>
+          <h2>Tell us what needs fixing.</h2>
+          <p class="text-muted-sf mt-3">We reply within a few working hours, usually with a price.</p>
+          <ul class="contact-list mt-4">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg><div><strong>Phone</strong><a href="tel:+10000000000">+1 000 000 0000</a></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg><div><strong>Email</strong><a href="mailto:hello@example.com">hello@example.com</a></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg><div><strong>Workshop</strong><span>123 Example Street, Your City</span></div></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg><div><strong>Hours</strong><span>Mon to Sat, 8:00 to 18:00</span></div></li>
+          </ul>
+          <!-- Replace this illustration with your own map embed. -->
+          <div class="map">
+            <svg viewBox="0 0 480 220" role="img" aria-label="Map placeholder">
+              <rect class="m-bg" width="480" height="220"/>
+              <rect class="m-park" x="300" y="20" width="150" height="90" rx="12"/>
+              <path class="m-road" d="M-10 150C100 130 180 170 260 120S400 60 490 150"/>
+              <path class="m-road-s" d="M90 -10 150 230M260 -10l30 240M400 -10l-40 240M-10 60h500"/>
+              <path class="m-pin" d="M240 140s34-30 34-56a34 34 0 0 0-68 0c0 26 34 56 34 56z"/>
+              <circle class="m-pin-c" cx="240" cy="84" r="13"/>
+            </svg>
+          </div>
+        </div>
+        <div class="col-lg-7 reveal">
+          <div class="contact-panel">
+            <form id="contactForm" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label class="form-label" for="name">Your name</label>
+                  <input class="form-control" id="name" name="name" type="text" autocomplete="name" required>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label" for="phone">Phone</label>
+                  <input class="form-control" id="phone" name="phone" type="tel" autocomplete="tel" required>
+                  <div class="invalid-feedback">Please enter a phone number.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="email">Email</label>
+                  <input class="form-control" id="email" name="email" type="email" autocomplete="email" required>
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="service">What do you need help with?</label>
+                  <select class="form-select" id="service" name="service" required>
+                    <option value="">Choose a service</option>
+                    <option>Plumbing repairs</option>
+                    <option>Electrical fixes</option>
+                    <option>Painting and patching</option>
+                    <option>Doors and windows</option>
+                    <option>Assembly and mounting</option>
+                    <option>Outdoor upkeep</option>
+                    <option>Something else</option>
+                  </select>
+                  <div class="invalid-feedback">Please choose an option.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="message">Describe the job</label>
+                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="What's wrong, where it is and when it would suit you" required></textarea>
+                  <div class="invalid-feedback">Please add a short description.</div>
+                </div>
+                <div class="col-12 d-flex flex-wrap align-items-center gap-3">
+                  <button class="btn btn-sf btn-lg" type="submit">Send request
+                    <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow"></use></svg>
+                  </button>
+                  <span class="form-note">No obligation. We only use your details to reply.</span>
+                </div>
+                <div class="col-12">
+                  <div class="alert alert-success form-success mb-0" role="status" tabindex="-1">Thanks! This demo form doesn't send anything yet. Connect it to your own backend or form service.</div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action -->
+  <section class="section pb-0 pt-5 mt-3">
+    <div class="container">
+      <div class="cta-band reveal">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <h2>That list on the fridge won't fix itself.</h2>
+            <p class="mt-2">Send it over and get a price today.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a class="btn btn-light btn-lg" href="#contact">Get a free quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer mt-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <a class="brand" href="#top">
+          <span class="brand-mark"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-wrench"></use></svg></span>
+          Steadfast
+        </a>
+        <p class="text-muted-sf mt-3 mb-0" style="max-width:26rem">Reliable home repairs for the jobs that keep getting put off. Fair prices, tidy work and a 12-month guarantee.</p>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">How it works</a></li>
+          <li><a href="#work">Recent work</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2">
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+10000000000">+1 000 000 0000</a></li>
+          <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year">2026</span> Steadfast. All rights reserved.</span>
+      <!-- Credit is optional under the MIT licence: remove it if you like. -->
+      <span>Template by <a href="https://kokybiskasvetaine.lt/" rel="nofollow">KokybiskaSvetaine.lt</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
