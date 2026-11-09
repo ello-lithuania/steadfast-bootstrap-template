@@ -287,3 +287,9 @@ a { text-underline-offset: .18em; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* Keep navigation labels and the header button on one line. */
+.site-nav .nav-link, .site-nav .btn { white-space: nowrap; }
+@media (max-width: 1199.98px) {
+  .site-nav .navbar-collapse { padding-block: .75rem 1rem; }
+}
