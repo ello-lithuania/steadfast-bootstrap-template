@@ -129,7 +129,6 @@ a { text-underline-offset: .18em; }
 [data-bs-theme="dark"] .theme-toggle .icon-moon { display: block; }
 .navbar-toggler { border-color: var(--sf-line); }
 .navbar-toggler:focus { box-shadow: 0 0 0 3px var(--sf-warm); }
-[data-bs-theme="dark"] .navbar-toggler-icon { filter: invert(1); }
 
 /* ---------- Hero ---------- */
 .hero { padding-block: clamp(2.5rem, 6vw, 5rem) clamp(3.5rem, 7vw, 6rem); overflow: hidden; }
